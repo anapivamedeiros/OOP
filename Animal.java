@@ -1,30 +1,25 @@
+package animal;
+
 public class Animal {
-    private double tamanho;
-    private String cor;
+    private String nome;
+    private String sexo;
+    private String raca;
 
-    public Animal (){
+    public Animal (String nome, String sexo, String raca) {
+        this.nome = nome;
+        this.sexo = sexo;
+        this.raca = raca;
     }
-    public Animal (double tamanho){
-        this.tamanho=tamanho;
+    public void dormir() {
+        System.out.println("Dormindo");
     }
-    public Animal (double tamanho, String cor){
-        this.tamanho=tamanho;
-        this.cor=cor;
+    public void caminhar(){
+        System.out.println("Caminhando");
     }
-
-    public double getTamanho() {
-        return tamanho;
+    public void correr(){
+        System.out.println("Correndo");
     }
-
-    public void setTamanho(double tamanho) {
-        this.tamanho = tamanho;
-    }
-
-    public String getCor() {
-        return cor;
-    }
-
-    public void setCor(String cor) {
-        this.cor = cor;
+    public void emitirSom(){
+        System.out.println("Emitindo som");
     }
 }
