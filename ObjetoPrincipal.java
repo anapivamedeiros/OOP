@@ -1,33 +1,27 @@
+package Heranca;
 
-    package Heranca;
+public class ObjetoPrincipal {
+    public static void main(String[] args) {
 
-    public class ObjetoPrincipal {
-        public static void main(String [] args) {
+        // Criando uma Pessoa
+        Pessoa pessoa = new Pessoa("João da Silva", "(11) 9994-9999");
+        System.out.println("\nPessoa:");
+        System.out.println("Nome: " + pessoa.getNome());
+        System.out.println("Telefone: " + pessoa.getTelefone());
 
-            Veiculo veiculo = new Veiculo("Ferrari", "12Cilindr", 2025, "Vermelha");
-            System.out.println("Veiculo:");
-            System.out.println("Marca:" + veiculo.getMarca());
-            System.out.println("Modelo:" + veiculo.getModelo());
-            System.out.println("Ano:" + veiculo.getAno());
-            System.out.println("Cor:" + veiculo.getCor());
+        // Criando uma Pessoa Física
+        PessoaFisica pessoaFisica = new PessoaFisica("João da Silva", "(11) 9999-9999", "123.456.789-00", "300.456.989-X");
+        System.out.println("\nPessoa Física:");
+        System.out.println("Nome: " + pessoaFisica.getNome());
+        System.out.println("Telefone: " + pessoaFisica.getTelefone());
+        System.out.println("CPF: " + pessoaFisica.getCpf());
+        System.out.println("RG: " + pessoaFisica.getRg());
 
-            Automovel automovel = new Automovel("Porsche", "718 Boxster", 2016, "Rosa", 2, "motores 2.0 turbo de 4 cilindros e motores aspirados de 4.0 litros com 6 cilindros");
-            System.out.println("\nAutomóvel:");
-            System.out.println("Marca:" + automovel.getMarca());
-            System.out.println("Modelo:" + automovel.getModelo());
-            System.out.println("Ano:" + automovel.getAno());
-            System.out.println("Cor:" + automovel.getCor());
-            System.out.println("Numero de portas:" + automovel.getNumPortas());
-            System.out.println("Motor:" + automovel.getMotor());
-
-            Moto moto = new Moto("Ducati", "Diavel V4", 2025, "Vermelha", "1.158 cc de cilindrada");
-            System.out.println("\nMoto:");
-            System.out.println("Marca:" + moto.getMarca());
-            System.out.println("Modelo:" + moto.getModelo());
-            System.out.println("Ano:" + moto.getAno());
-            System.out.println("Cor:" + moto.getCor());
-            System.out.println("Cilindrada:" + moto.getCilindrada());
-
-        }
+        // Criando uma Pessoa Jurídica
+        PessoaJuridica pessoaJuridica = new PessoaJuridica("Empresa XYZ", "(11) 9999-9999", "12.345.678/0001-23");
+        System.out.println("\nPessoa Jurídica:");
+        System.out.println("Nome: " + pessoaJuridica.getNome());
+        System.out.println("Telefone: " + pessoaJuridica.getTelefone());
+        System.out.println("CNPJ: " + pessoaJuridica.getCnpj());
     }
-
+}
